@@ -1,4 +1,4 @@
-package com.example.devicetest.components
+package com.example.devicetest.screen.air_conditioner
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.Image
@@ -10,19 +10,25 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.navigation.NavHostController
 import com.example.devicetest.R
+import com.example.devicetest.components.DeviceCircle
+import com.example.devicetest.components.DeviceModeDialog
+import com.example.devicetest.components.DeviceProgMods
 import com.example.devicetest.model.DeviceState
 import com.example.devicetest.ui.theme.Background
 
 @ExperimentalAnimationApi
 @ExperimentalComposeUiApi
-@Preview
 @Composable
-fun AirConditioner() {
-    var airConditionerState by remember { mutableStateOf(DeviceState()) }
+fun AirConditioner(navController: NavHostController) {
+    val viewModel: AirConditionerViewModel = viewModel()
+
     var isDialogShown by remember { mutableStateOf(false) }
+
+    val airConditionerState by viewModel.liveDeviceState.collectAsState()
 
     Box(
         modifier = Modifier
@@ -53,7 +59,7 @@ fun AirConditioner() {
             deviceProgMode = airConditionerState.progMode,
             availableProgMods = airConditionerState.availableProgMods,
             onSelectedProgMode = {
-                airConditionerState = airConditionerState.copy(progMode = it)
+                viewModel.updateData(airConditionerState.copy(progMode = it))
             }
         )
 
@@ -65,7 +71,7 @@ fun AirConditioner() {
                 availableDeviceMods = airConditionerState.availableDeviceMods,
                 currentMode = airConditionerState.currentMode,
                 onModeSelected = {
-                    airConditionerState = airConditionerState.copy(currentMode = it)
+                    viewModel.updateData(airConditionerState.copy(currentMode = it))
                     isDialogShown = false
                 },
                 onDismissRequest = {

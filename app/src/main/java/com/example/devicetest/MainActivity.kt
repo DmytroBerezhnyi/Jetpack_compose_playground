@@ -4,13 +4,11 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.animation.ExperimentalAnimationApi
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Surface
-import androidx.compose.material.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.ExperimentalComposeUiApi
-import androidx.compose.ui.tooling.preview.Preview
-import com.example.devicetest.components.AirConditioner
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
+import androidx.navigation.compose.rememberNavController
+import com.example.devicetest.screen.air_conditioner.AirConditioner
 import com.example.devicetest.ui.theme.DeviceTestTheme
 
 @ExperimentalComposeUiApi
@@ -21,7 +19,16 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             DeviceTestTheme {
-                AirConditioner()
+                val navController = rememberNavController()
+
+                NavHost(
+                    navController = navController,
+                    startDestination = "AirConditioner"
+                ) {
+                    composable("AirConditioner") {
+                        AirConditioner(navController)
+                    }
+                }
             }
         }
     }
