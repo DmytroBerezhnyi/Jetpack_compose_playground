@@ -1,8 +1,8 @@
-package com.example.devicetest.screen.air_conditioner
+package com.example.playground.compose.ui.air_conditioner
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.devicetest.model.DeviceState
+import com.example.playground.compose.ui.air_conditioner.model.DeviceState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow

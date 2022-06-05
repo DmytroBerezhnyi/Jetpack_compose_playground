@@ -1,4 +1,4 @@
-package com.example.devicetest.components
+package com.example.playground.compose.ui.air_conditioner.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -13,8 +13,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.devicetest.model.DeviceProgMode
-import com.example.devicetest.ui.theme.Gray
+import com.example.playground.compose.ui.air_conditioner.model.DeviceProgMode
+import com.example.playground.compose.theme.Gray
 
 @Composable
 fun DeviceProgMods(

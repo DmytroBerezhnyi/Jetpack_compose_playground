@@ -1,7 +1,7 @@
-package com.example.devicetest.model
+package com.example.playground.compose.ui.air_conditioner.model
 
 import androidx.annotation.DrawableRes
-import com.example.devicetest.R
+import com.example.playground.R
 
 data class DeviceState(
     val currentMode: DeviceMode = DeviceMode.OFF,

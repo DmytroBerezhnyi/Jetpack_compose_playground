@@ -1,4 +1,4 @@
-package com.example.devicetest.ui.theme
+package com.example.playground.compose.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

@@ -1,4 +1,4 @@
-package com.example.devicetest.ui.theme
+package com.example.playground.compose.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle

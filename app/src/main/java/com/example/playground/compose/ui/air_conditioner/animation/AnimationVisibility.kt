@@ -1,4 +1,4 @@
-package com.example.devicetest.animation
+package com.example.playground.compose.ui.air_conditioner.animation
 
 import androidx.compose.animation.*
 import androidx.compose.animation.core.Spring

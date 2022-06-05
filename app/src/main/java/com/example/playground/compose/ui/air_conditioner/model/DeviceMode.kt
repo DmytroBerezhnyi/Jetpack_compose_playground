@@ -1,4 +1,4 @@
-package com.example.devicetest.model
+package com.example.playground.compose.ui.air_conditioner.model
 
 enum class DeviceMode {
     OFF,

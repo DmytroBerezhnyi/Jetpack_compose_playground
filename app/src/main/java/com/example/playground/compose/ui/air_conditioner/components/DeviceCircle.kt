@@ -1,4 +1,4 @@
-package com.example.devicetest.components
+package com.example.playground.compose.ui.air_conditioner.components
 
 import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.Image
@@ -12,11 +12,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.devicetest.R
-import com.example.devicetest.animation.AnimateVisibilityFromBottomToTop
-import com.example.devicetest.animation.AnimateVisibilityFromTopToBottom
-import com.example.devicetest.model.DeviceState
-import com.example.devicetest.ui.theme.Gray
+import com.example.playground.R
+import com.example.playground.compose.ui.air_conditioner.animation.AnimateVisibilityFromBottomToTop
+import com.example.playground.compose.ui.air_conditioner.animation.AnimateVisibilityFromTopToBottom
+import com.example.playground.compose.ui.air_conditioner.model.DeviceState
+import com.example.playground.compose.theme.Gray
 
 @ExperimentalAnimationApi
 @Composable

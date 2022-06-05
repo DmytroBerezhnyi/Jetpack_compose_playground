@@ -1,27 +1,22 @@
-package com.example.devicetest.screen.air_conditioner
+package com.example.playground.compose.ui.air_conditioner
 
-import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
-import com.example.devicetest.R
-import com.example.devicetest.components.DeviceCircle
-import com.example.devicetest.components.DeviceModeDialog
-import com.example.devicetest.components.DeviceProgMods
-import com.example.devicetest.model.DeviceState
-import com.example.devicetest.ui.theme.Background
+import com.example.playground.R
+import com.example.playground.compose.ui.air_conditioner.components.DeviceCircle
+import com.example.playground.compose.ui.air_conditioner.components.DeviceModeDialog
+import com.example.playground.compose.ui.air_conditioner.components.DeviceProgMods
+import com.example.playground.compose.theme.Background
 
-@ExperimentalAnimationApi
-@ExperimentalComposeUiApi
 @Composable
 fun AirConditioner(navController: NavHostController) {
     val viewModel: AirConditionerViewModel = viewModel()

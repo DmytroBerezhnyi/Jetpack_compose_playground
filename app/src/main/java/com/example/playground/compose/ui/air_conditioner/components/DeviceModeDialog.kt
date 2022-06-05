@@ -1,4 +1,4 @@
-package com.example.devicetest.components
+package com.example.playground.compose.ui.air_conditioner.components
 
 import android.util.Log
 import androidx.compose.foundation.background
@@ -20,8 +20,8 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import com.example.devicetest.model.DeviceMode
-import com.example.devicetest.ui.theme.Gray
+import com.example.playground.compose.ui.air_conditioner.model.DeviceMode
+import com.example.playground.compose.theme.Gray
 
 @ExperimentalComposeUiApi
 @Composable
